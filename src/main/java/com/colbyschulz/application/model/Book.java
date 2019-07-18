@@ -1,12 +1,20 @@
 package com.colbyschulz.application.model;
 
-//import javax.persistence.Entity;
-//import javax.persistence.GeneratedValue;
-//import javax.persistence.Id;
+import javax.validation.constraints.Size;
+import javax.validation.constraints.NotNull;
+
 
 public class Book {
+    @Size(min=2)
+    @NotNull
     private String title;
+
+    @Size(min=2)
+    @NotNull
     private String authorFirstName;
+
+    @Size(min=2)
+    @NotNull
     private String authorLastName;
 
     public Book(String title, String authorFirstName, String authorLastName) {
