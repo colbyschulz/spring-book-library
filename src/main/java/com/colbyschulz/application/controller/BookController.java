@@ -35,4 +35,8 @@ public class BookController {
         return booksData.entrySet();
     }
 
+    @GetMapping("/books:id")
+    public Book getBookById(@PathVariable Integer bookId) {
+        return booksData.get(bookId);
+    }
 }
